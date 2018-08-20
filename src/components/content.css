@@ -1,0 +1,39 @@
+.content-1 {
+  height: 600px;
+  background-color: #f0f0f0;
+}
+.content-box {
+  background: #ffff;
+  position: relative;
+  height: 500px;
+  max-width: 1170px;
+  margin: 0 auto;
+  top: -140px;
+}
+
+.sb-section-title {
+  text-align: center;
+  margin-top: 16px;
+  padding: 32px;
+}
+
+.sb-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sb-section-left {
+  text-align: left;
+  width: 460px;
+  margin-left: 32px;
+  padding: 16px;
+}
+.sb-section-right {
+  text-align: right;
+  width: 460px;
+  margin-right: 32px;
+  padding: 16px;
+}
+
+
+
