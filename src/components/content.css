@@ -1,5 +1,5 @@
 .content-1 {
-  height: 600px;
+  height: 400px;
   background-color: #f0f0f0;
 }
 .content-box {
@@ -9,12 +9,6 @@
   max-width: 1170px;
   margin: 0 auto;
   top: -140px;
-}
-
-.sb-section-title {
-  text-align: center;
-  margin-top: 16px;
-  padding: 32px;
 }
 
 .sb-sections {

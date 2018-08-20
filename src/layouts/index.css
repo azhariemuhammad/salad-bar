@@ -622,6 +622,11 @@ pre tt:after {
   width: 100%;
 }
 
+.sb-section-title {
+  text-align: center;
+  margin-top: 16px;
+  padding: 32px;
+}
 
 @media only screen and (max-width: 480px) {
   html {

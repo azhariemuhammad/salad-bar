@@ -6,22 +6,29 @@ import Header from '../components/header'
 import Banner from '../components/banner'
 import './index.css'
 
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <Banner></Banner>
-    <div>
-      {children()}
-    </div>
-  </div>
-)
+class Layout extends React.PureComponent {
+  render() {
+    const { children, data } = this.props
+    // const childrenWithProps = React.Children.map(children, child =>
+    //   React.cloneElement(child, { aboutImage: data })
+    // )
+    const aboutImg = data.aboutImage
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Banner />
+        <div>{children({...this.props, ...aboutImg})}</div>
+      </div>
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.func,
@@ -30,10 +37,15 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-  query bannerImageQueryAndSiteTitleQuery {
+  query aboutImageQueryAndSiteTitleQuery {
     site {
       siteMetadata {
         title
+      }
+    }
+    aboutImage: imageSharp(id: { regex: "/food-image/" }) {
+      sizes(maxWidth: 410) {
+        ...GatsbyImageSharpSizes
       }
     }
   }
