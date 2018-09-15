@@ -6,3 +6,13 @@
   width: 410px;
   height: 500px;
 }
+
+.sb-about-right {
+  width: 100%;
+}
+
+.sb-about-left {
+  width: 400px;
+  margin-right: 20px;
+}
+

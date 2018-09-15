@@ -9,9 +9,6 @@ import './index.css'
 class Layout extends React.PureComponent {
   render() {
     const { children, data } = this.props
-    // const childrenWithProps = React.Children.map(children, child =>
-    //   React.cloneElement(child, { aboutImage: data })
-    // )
     const aboutImg = data.aboutImage
     return (
       <div>

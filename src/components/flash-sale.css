@@ -1,0 +1,15 @@
+
+.sb-flash-sale {
+  height: 500px;
+  background-color: lightgray;
+  margin-bottom: 16px;
+  padding: 32px;
+}
+
+.sb-left {
+  width: 600px;
+}
+
+.sb-right {
+  width: 100%;
+}
