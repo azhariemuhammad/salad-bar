@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import './about.css'
 
 const About = props => {
+  console.log(props)
   return (
     <div className="full-width">
       <section className="sb-section-title">
@@ -24,8 +25,8 @@ const About = props => {
             </div>
             <div className="sb-about-right">
               <div className="title">
-                <h4 style={{'margin-bottom': "0px"}}>Discover</h4>
-                <h2 style={{'margin': "8px", 'margin-bottom': "0px"}}>Our Story</h2>
+                <h4 style={{'marginBottom': "0px"}}>Discover</h4>
+                <h2 style={{'margin': "8px", 'marginBottom': "0px"}}>Our Story</h2>
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum

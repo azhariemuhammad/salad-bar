@@ -8,8 +8,11 @@
     "gatsby-image": "1.0.55",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "1.0.11",
     "gatsby-plugin-sharp": "1.6.48",
     "gatsby-transformer-sharp": "1.6.27",
+    "react-flickity-component": "3.0.3",
+    "react-glide": "2.0.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -18,7 +21,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

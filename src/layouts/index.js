@@ -9,7 +9,7 @@ import './index.css'
 class Layout extends React.PureComponent {
   render() {
     const { children, data } = this.props
-    const aboutImg = data.aboutImage
+    const image = data
     return (
       <div>
         <Helmet
@@ -21,7 +21,7 @@ class Layout extends React.PureComponent {
         />
         <Header siteTitle={data.site.siteMetadata.title} />
         <Banner />
-        <div>{children({...this.props, ...aboutImg})}</div>
+        <div>{children({...this.props, ...image})}</div>
       </div>
     )
   }
@@ -32,6 +32,16 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+export const squareImage = graphql`
+fragment squareImage on File {
+      childImageSharp {
+        sizes(maxWidth: 960) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+}
+`;
 
 export const query = graphql`
   query aboutImageQueryAndSiteTitleQuery {
@@ -44,6 +54,15 @@ export const query = graphql`
       sizes(maxWidth: 410) {
         ...GatsbyImageSharpSizes
       }
+    }
+    carousel1:file(relativePath: {  regex: "/salad-image1/" }) {
+      ...squareImage
+    }
+    carousel2:file(relativePath: {  regex: "/salad-image2/" }) {
+      ...squareImage
+    }
+    carousel3:file(relativePath: {  regex: "/salad-image3/" }) {
+      ...squareImage
     }
   }
 `
