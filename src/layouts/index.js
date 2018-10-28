@@ -51,7 +51,7 @@ export const query = graphql`
       }
     }
     aboutImage: imageSharp(id: { regex: "/food-image/" }) {
-      sizes(maxWidth: 410) {
+      sizes(maxWidth: 1024) {
         ...GatsbyImageSharpSizes
       }
     }

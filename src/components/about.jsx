@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import './about.css'
 
 const About = props => {
-  console.log(props)
   return (
     <div className="full-width">
       <section className="sb-section-title">
@@ -18,7 +17,7 @@ const About = props => {
                     title="Header image"
                     alt="Greek food laid out on table"
                     sizes={props.aboutImg.sizes}
-                    style={{ width: '410px' }}
+                    style={{ width: '300px' }}
                   />
                 </picture>
               </figure>
